@@ -1,0 +1,97 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+        "id": "arvind.ged.cc",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "i18n": "i18n/i18n.properties",
+        "title": "{{APP_TITLE}}",
+        "description": "Cost Calculation",
+        "dataSources": {
+            "CostCalculation": {
+                "uri": "/sap/opu/odata/sap/ZGED_SO_COST_CALCULATION_SRV/",
+                "type": "OData",
+                
+                "settings": {
+                    "odataVersion": "2.0"  
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "fullWidth": true,
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "supportedThemes": [
+            "sap_fiori_3"
+        ]
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.130.8",
+            "libs": {
+                "sap.m": {
+                    "minVersion": "1.130.8"
+                },
+                "sap.ui.layout": {
+                    "minVersion": "1.130.8"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "arvind.ged.cc.view.App",
+            "type": "XML",
+            "id": "idAppCon"
+        },
+        "routing": {
+            "config": {
+                "viewPath": "arvind.ged.cc.view",
+                "viewType": "XML",
+                "controlId": "idAppCon",
+                "clearControlAggregation": true
+            },
+            "routes": [
+                {
+                    "name": "init",
+                    "pattern": "",
+                    "target": "1st"
+                }
+            ],
+            "targets": {
+                "1st": {
+                    "viewName": "Main",
+                    "controlAggregation": "pages",
+                    "viewId": "idView1"
+                }
+              
+            }
+        },
+        "models": {
+            "":{
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "dataSource": "CostCalculation",
+                "settings": {
+                    "useBatch": false
+
+                }
+            },
+            "i18n":{
+                "type": "sap.ui.model.resource.ResourceModel",
+                "preload": true,
+                "settings": {"bundleUrl": "i18n/i18n.properties"}
+                
+
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+    }
+}

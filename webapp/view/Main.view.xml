@@ -1,0 +1,683 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="arvind.ged.cc.controller.Main"
+>
+    <Page
+        title="Cost Calculation"
+        xmlns:core="sap.ui.core"
+    >
+        <ScrollContainer
+            width="100%"
+            horizontal="true"
+            vertical="true"
+            focusable="true"
+        >
+            <FlexBox
+                id="idMain"
+                width="100%"
+                alignItems="Start"
+                justifyContent="SpaceBetween"
+            >
+                <VBox>
+                    <HBox
+                        fitContainer="true"
+                        alignItems="Stretch"
+                    >
+                        <Label
+                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                            text="From Date"
+                            labelFor="DP1"
+                        />
+                        <DatePicker
+                            class="sapUiTinyMarginEnd"
+                            id="DP1"
+                            valueFormat="yyyy-MM-dd"
+                            displayFormat="dd-MM-yyyy"
+                        />
+                        <!-- <DatePicker
+                    id="DP1"
+                    width="35%"
+                    valueFormat="yyyyMMdd"
+                    displayFormat="dd-MM-yyyy"
+                /> -->
+                        <Label
+                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                            text="To Date"
+                            labelFor="DP2"
+                        />
+                        <DatePicker
+                            id="DP2"
+                            valueFormat="yyyy-MM-dd"
+                            displayFormat="dd-MM-yyyy"
+                        />
+                        <Button
+                            id="btnGetLine"
+                            press="onGetLine"
+                            text="GetLineNo"
+                        />
+                        <!-- </HBox>
+
+                <HBox> -->
+                        <Label
+                            id="lblLineNo"
+                            text="Line No."
+                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                        />
+                        <!-- <Input id="inpLineNo" /> -->
+                        <ComboBox
+                            id="inpLineNo"
+                            items="{LineNoModel>/}"
+                        >
+                            <Item
+                                xmlns="sap.ui.core"
+                                key="{LineNoModel>LineNo}"
+                                text="{LineNoModel>LineNo}"
+                            />
+                        </ComboBox>
+
+                        <Button
+                            id="btnGetSo"
+                            press="onSoNo"
+                            text="GetSONo"
+                        />
+                        <!-- </HBox>
+                
+                <HBox> -->
+                        <Label
+                            id="lblSoNo"
+                            text="SO No."
+                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                        />
+                        <Input id="inpSoNo" valueHelpRequest="onSOF4"
+                    showValueHelp="true" />
+
+                        <Button
+                            id="btnSoDtl"
+                            press="onSoDet"
+                            text="So Detail"
+                        />
+                    </HBox>
+                    <!-- <HBox alignContent="Center" justifyContent="Center"> -->
+                    <HBox>
+                        <VBox>
+                            <HBox
+                                fitContainer="true"
+                                alignItems="Stretch"
+                            >
+                                <Label
+                                    visible="false"
+                                    id="lblSoNo1"
+                                    text="SO No."
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                                <Text
+                                    visible="false"
+                                    id="txtSoNo1"
+                                    text="24678990"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                            <HBox
+                                fitContainer="true"
+                                alignItems="Stretch"
+                            >
+                                <Label
+                                    visible="false"
+                                    id="lblOdrVal"
+                                    text="Order Qty."
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                                <Text
+                                    visible="false"
+                                    id="txtOdrVal"
+                                    text="50"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <HBox>
+                                <Label
+                                    id="lblCust"
+                                    text="Customer."
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                                <Text
+                                    id="txtCust"
+                                    text="Arvind Ltd"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                            <HBox>
+                                <Label
+                                    id="lblProdType"
+                                    text="Prod Type"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                                <Text
+                                    id="txtProdType"
+                                    text="Yet to updt"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                    <HBox>
+                        <VBox>
+                            <HBox>
+                                <Title
+                                    id="lblRevenue"
+                                    text="Revenue"
+                                    level="H2"
+                                    titleStyle="H2"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                            <HBox>
+                                <Label
+                                    id="lblFobRate"
+                                    text="FOB Rate (INR)"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                                <Text
+                                    id="txtFobRate"
+                                    text="09876543"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <HBox>
+                                <Title
+                                    id="lblMaterials"
+                                    text="Materials"
+                                    level="H2"
+                                    titleStyle="H2"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                            <HBox>
+                                <VBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblShellFabric"
+                                            text="Shell Fabric (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblTrimFabric"
+                                            text="Trim Fabric (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblTrims"
+                                            text="Trims (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblPrintingAndOthers"
+                                            text="Printing and others (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblTransportation"
+                                            text="Transportation (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblTestingAndDevelopment"
+                                            text="Testing and development (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblVariableMaterialsCost"
+                                            text="Variable materials cost (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblValueLoss"
+                                            text="Value Loss (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblTotalCostOfMaterials"
+                                            text="Total Cost of Materials (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                </VBox>
+                                <VBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtShellFabric"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtTrimFabric"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtTrims"
+                                            text="9876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtPrintingAndOthers"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+
+                                    <HBox>
+                                        <Text
+                                            id="txtTransportation"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtTestingAndDevelopment"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtVariableMaterialsCost"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtValueLoss"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtTotalCostOfMaterials"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                            <HBox />
+                            <HBox />
+                            <!-- <HBox >                
+                 </HBox>
+                 <HBox >                
+                 </HBox>
+                 <HBox >                
+                 </HBox>
+                 
+                 <HBox >                
+                 </HBox>
+                 <HBox >                
+                 </HBox>
+                 <HBox >                
+                 </HBox> -->
+                        </VBox>
+                        <VBox>
+                            <HBox>
+                                <Title
+                                    id="lblManufacturing"
+                                    text="Manufacturing"
+                                    level="H2"
+                                    titleStyle="H2"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                            <HBox>
+                                <VBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblSmv"
+                                            text="SMV (Mints)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblTargetLineEff"
+                                            text="Target Line Eff (%)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+
+                                    <HBox>
+                                        <Label
+                                            id="lblTargetProdnDayLine"
+                                            text="Target Prodn/day/line (Pcs)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblProdnLine"
+                                            text="Prodn Line (Nos)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblNoOfDays"
+                                            text="No. of Days (Nos)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblActualLineEff"
+                                            text="Actual Line Eff (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            visible="false"
+                                            id="lblActualProdn"
+                                            text="Actual Prodn (Pcs)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                </VBox>
+                                <VBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtSmv"
+                                            text="9876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtTargetLineEff"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+
+                                    <HBox>
+                                        <Text
+                                            id="txtTargetProdnDayLine"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtProdnLine"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+
+                                    <HBox>
+                                        <Text
+                                            id="txtNoOfDays"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+
+                                    <HBox>
+                                        <Text
+                                            id="txtlblActualLineEff"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtActualProdn"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                    <HBox>
+                        <VBox>
+                            <HBox>
+                                <Title
+                                    id="lblCostWorkings"
+                                    text="Cost Workings"
+                                    level="H2"
+                                    titleStyle="H2"
+                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                />
+                            </HBox>
+                            <HBox>
+                                <VBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblGrossContribution"
+                                            text="Gross Contribution (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblGrossContributionLineDay"
+                                            text="Gross Contribution/line/Day (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblOperationCostLineDay"
+                                            text="Operation Cost/Line/Day (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblEbitdaLineDay"
+                                            text="EBITDA/Line/Day (INR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Label
+                                            id="lblAnnualisedEbitda"
+                                            text="Annualised EBITDA (In CR)"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                </VBox>
+                                <VBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtGrossContribution"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtGrossContributionLineDay"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtOperationCostLineDay"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtEbitdaLineDay"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                    <HBox>
+                                        <Text
+                                            id="txtAnnualisedEbitda"
+                                            text="09876543"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                    </HBox>
+                                </VBox>
+                                <VBox>
+                                    <HBox>
+                                        <VBox>
+                                            <HBox>
+                                                <Label
+                                                    id="lblAssetBlockLine"
+                                                    text="Asset Block/Line (In CR)"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+
+                                            <HBox>
+                                                <Label
+                                                    id="lblDepreciationLine"
+                                                    text="Depreciation/Line (In CR)"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Label
+                                                    id="lblWorkingCapitalLine"
+                                                    text="Working Capital/Line (In CR)"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Label
+                                                    id="lblTotalCapitalEmployedLine"
+                                                    text="Tot. Capital Employed/Line(In CR)"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Label
+                                                    id="lblAnnualisedRoceLine"
+                                                    text="Annualised ROCE/Line (In CR)"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Label
+                                                    id="lblAnnualisedRoce"
+                                                    text="Annualised ROCE (%)"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                        </VBox>
+                                        <VBox>
+                                            <HBox>
+                                                <Text
+                                                    id="txtAssetBlockLine"
+                                                    text="09876543"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Text
+                                                    id="txtDepreciationLine"
+                                                    text="09876543"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Text
+                                                    id="txtWorkingCapitalLine"
+                                                    text="09876543"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Text
+                                                    id="txtTotalCapitalEmployedLine"
+                                                    text="09876543"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Text
+                                                    id="txtAnnualisedRoceLine"
+                                                    text="09876543"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                            <HBox>
+                                                <Text
+                                                    id="txtAnnualisedRoce"
+                                                    text="09876543"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
+                                            </HBox>
+                                        </VBox>
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </FlexBox>
+        </ScrollContainer>
+        <!-- 
+  <Label
+                    text="Date From"
+                  
+                    labelFor="DP1"
+                />
+                <DatePicker
+                    id="DP1"
+                    width="20%"
+                    valueFormat="yyyyMMdd"
+                    displayFormat="dd-MM-yyyy"
+                />
+<Label
+                    text="Date To  "                   
+                    labelFor="DP2"
+                />
+                <DatePicker
+                    id="DP2"
+                    width="20%"
+                    valueFormat="yyyyMMdd"
+                    displayFormat="dd-MM-yyyy"
+                />
+    <Button id="btngetLine" text="Get Line" ></Button>  -->
+        <!-- </f:content>
+          
+    </f:SimpleForm> -->
+    </Page>
+</mvc:View>
