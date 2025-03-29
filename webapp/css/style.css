@@ -1,0 +1,54 @@
+.header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     background-color:maroon;
+     text-align: center;
+     left: 20%; 
+     align-items: center;
+     align-self: center;
+     
+ }
+ #__component0---idView1--hdr-text
+ {
+
+    font-size: large;
+    font-weight: bolder;    
+    color: white;
+    text-align: center;
+    align-items: center;
+ 
+ }
+ #__component0---idView1--lblCostWorkings,
+ #__component0---idView1--lblManufacturing,
+ #__component0---idView1--lblMaterials,
+ #__component0---idView1--lblRevenue
+
+ {
+    color: black;
+    text-decoration: underline;
+
+ }
+ #__component0---idView1--VBOXINPUT
+ {
+ border-bottom: 5px solid maroon;
+ }
+ /* #__component0---idView1--SODTL, */
+ #__component0---idView1--VBOXREV,
+ #__component0---idView1--VBOXMANF,
+ /* #__component0---idView1--VBOXCOST, */
+ #__component0---idView1--VBOXMAT
+ {
+
+    /* border-top: 5px solid maroon; */
+    /* border-right: 5px solid maroon; */
+
+ }
+ /* #__component0---idView1--SODTL, */
+ /* #__component0---idView1--VBOXREV, */
+ #__component0---idView1--VBOXMANF,
+ /* #__component0---idView1--VBOXCOST, */
+ #__component0---idView1--VBOXMAT
+ {
+    /* border-style: groove; */
+    /* padding-right: 30px; */
+    margin-left:30px;
+ }
