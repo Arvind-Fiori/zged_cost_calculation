@@ -7,7 +7,7 @@
             "version": "1.0.0"
         },
         "i18n": "i18n/i18n.properties",
-        "title": "{{APP_TITLE}}",
+        "title": "ATPPL - Digital Factory - Cost Per Line - Workings",
         "description": "Cost Calculation",
         "dataSources": {
             "CostCalculation": {

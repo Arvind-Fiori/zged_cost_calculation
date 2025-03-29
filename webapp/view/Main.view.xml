@@ -41,7 +41,8 @@
                 <VBox >
                     <HBox id="VBOXINPUT"
                         fitContainer="true"
-                        alignItems="Stretch"
+                        alignItems="Center"
+                        justifyContent="Center"
                     >
                         <Label
                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"

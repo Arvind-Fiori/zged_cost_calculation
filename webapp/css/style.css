@@ -7,7 +7,8 @@
      align-self: center;
      
  }
- #__component0---idView1--hdr-text
+ #__component0---idView1--hdr-text,
+ #application-ZGED_COST_CALCULATION-display-component---idView1--hdr-text
  {
 
     font-size: large;
@@ -18,16 +19,21 @@
  
  }
  #__component0---idView1--lblCostWorkings,
+ #application-ZGED_COST_CALCULATION-display-component---idView1--lblCostWorkings,
  #__component0---idView1--lblManufacturing,
+ #application-ZGED_COST_CALCULATION-display-component---idView1--lblManufacturing,
  #__component0---idView1--lblMaterials,
- #__component0---idView1--lblRevenue
-
+ #application-ZGED_COST_CALCULATION-display-component---idView1--lblMaterials,
+ #__component0---idView1--lblRevenue,
+ #application-ZGED_COST_CALCULATION-display-component---idView1--lblRevenue
  {
     color: black;
     text-decoration: underline;
 
  }
- #__component0---idView1--VBOXINPUT
+ #__component0---idView1--VBOXINPUT,
+ #application-ZGED_COST_CALCULATION-display-component---idView1--VBOXINPUT
+ 
  {
  border-bottom: 5px solid maroon;
  }
@@ -45,10 +51,22 @@
  /* #__component0---idView1--SODTL, */
  /* #__component0---idView1--VBOXREV, */
  #__component0---idView1--VBOXMANF,
+ 
+ #application-ZGED_COST_CALCULATION-display-component---idView1--VBOXMANF,
  /* #__component0---idView1--VBOXCOST, */
- #__component0---idView1--VBOXMAT
+ #__component0---idView1--VBOXMAT,
+ 
+ #application-ZGED_COST_CALCULATION-display-component---idView1--VBOXMAT
  {
     /* border-style: groove; */
     /* padding-right: 30px; */
-    margin-left:30px;
+    /* margin-left:30px; */
  }
+ #__component0---idView1--btnSoDtl,
+ #application-ZGED_COST_CALCULATION-display-component---idView1--btnSoDtl
+ {
+   margin-right:100px; 
+
+ }
+ 
+ 

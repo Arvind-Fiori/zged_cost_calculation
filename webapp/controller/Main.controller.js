@@ -61,6 +61,8 @@ sap.ui.define(
                  this.hideManufacturing();
                  this.hideCostWorkings();
 
+
+
                  MessageBox.error("Please Select So No.");
                     return;
                 }                 
@@ -246,47 +248,89 @@ sap.ui.define(
                 this.soFilter = oFilter;
                 this.oField = oEvent.getSource();
                 var that = this;
-                if (!this.oSalesOrgF4) {
+// 
+
+if (!this.oSalesOrgF4) {
+    // Create the fragment using sap.ui.xmlfragment
+    this.oSalesOrgF4 = sap.ui.xmlfragment(
+        "SalesOrgF4", // Unique ID
+        "arvind.ged.cc.fragments.popup", // Fragment name with namespace
+        this // Controller reference
+    );
+
+    // Add fragment as a dependent to the view
+    this.getView().addDependent(this.oSalesOrgF4);
+
+    // Set multi-select if needed
+    this.oSalesOrgF4.setMultiSelect(false);
+
+    // Bind aggregation to the list
+    this.oSalesOrgF4.bindAggregation("items", {
+        path: "/GetSoNoSet",
+        template: new sap.m.StandardListItem({
+            title: "{So}"
+        }),
+        filters: this.soFilter
+    });
+
+    // Open the fragment
+    this.oSalesOrgF4.open();
+} else {
+    // If fragment already exists
+    this.oSalesOrgF4.open();
+    this.oSalesOrgF4.bindAggregation("items", {
+        path: "/GetSoNoSet",
+        template: new sap.m.StandardListItem({
+            title: "{So}"
+        }),
+        filters: this.soFilter
+    });
+}
+
+// 
+
+                // if (!this.oSalesOrgF4) {
                     debugger; 
                    
               
-                    Fragment.load({
-                        controller: this,
-                        id: 'SalesOrgF4',
-                        fragmentName: 'arvind.ged.cc.fragments.popup'
-                    }).then(function (oFragment) {
-                        that.oSalesOrgF4 = oFragment;
+                //     Fragment.load({
+                //         controller: this,
+                //         id: 'SalesOrgF4',
+                       
+                //         fragmentName: 'arvind.ged.cc.fragments.popup'
+                //     }).then(function (oFragment) {
+                //         that.oSalesOrgF4 = oFragment;
 
-                        that.oSalesOrgF4.setMultiSelect(false);
-                        debugger;
-                        that.oSalesOrgF4.bindAggregation("items", {
-                            path: '/GetSoNoSet',
-                            template: new sap.m.StandardListItem({
-                                title: '{So}'
+                //         that.oSalesOrgF4.setMultiSelect(false);
+                //         debugger;
+                //         that.oSalesOrgF4.bindAggregation("items", {
+                //             path: '/GetSoNoSet',
+                //             template: new sap.m.StandardListItem({
+                //                 title: '{So}'
                                
 
-                            }),
-                          filters: that.soFilter
+                //             }),
+                //           filters: that.soFilter
 
-                        });
-                        that.getView().addDependent(that.oSalesOrgF4);
+                //         });
+                //         that.getView().addDependent(that.oSalesOrgF4);
                        
-                        oFragment.open();
-                    });
+                //         oFragment.open();
+                //     }.bind(this))
 
-                } else {
-                    debugger;
-                    this.oSalesOrgF4.open();
-                    this.oSalesOrgF4.bindAggregation("items", {
-                        path: '/GetSoNoSet',
-                        template: new sap.m.StandardListItem({
-                            title: '{So}'
+                // } else {
+                //     debugger;
+                //     this.oSalesOrgF4.open();
+                //     this.oSalesOrgF4.bindAggregation("items", {
+                //         path: '/GetSoNoSet',
+                //         template: new sap.m.StandardListItem({
+                //             title: '{So}'
 
-                        }),
-                        filters: that.soFilter
+                //         }),
+                //         filters: that.soFilter
 
-                    });
-                }
+                //     });
+                //  }
 
 
             },
