@@ -231,145 +231,155 @@
                             </HBox>
                             <HBox>
                                 <VBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblShellFabric"
                                             text="Shell Fabric (INR)"
-                                            design="Bold"
+                                           design="Bold"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                         <Text
+                                            id="txtShellFabric"
+                                            text="{SoDetail>/0/ShellFabric}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblTrimFabric"
                                             text="Trim Fabric (INR)"
-                                            design="Bold"
+                                           design="Bold"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                          <Text
+                                            id="txtTrimFabric"
+                                            text="{SoDetail>/0/TrimFabric}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblTrims"
                                             text="Trims (INR)"
-                                            design="Bold"
+                                          design="Bold"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                         <Text
+                                            id="txtTrims"
+                                            text="{SoDetail>/0/Trims}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblPrintingAndOthers"
                                             text="Printing and others (INR)"
-                                            design="Bold"
+                                         design="Bold"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+  <Text
+                                            id="txtPrintingAndOthers"
+                                            text="{SoDetail>/0/Printingandothers}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblTransportation"
                                             text="Transportation (INR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                         <Text
+                                            id="txtTransportation"
+                                            text="{SoDetail>/0/Transportation}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblTestingAndDevelopment"
                                             text="Testing and development (INR)"
-                                            design="Bold"
+                                          design="Bold"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                          <Text
+                                            id="txtTestingAndDevelopment"
+                                            text="{SoDetail>/0/TestingaAddDev}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblVariableMaterialsCost"
                                             text="Variable materials cost (INR)"
-                                            design="Bold"
+                                         design="Bold"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                          <Text
+                                            id="txtVariableMaterialsCost"
+                                            text="{SoDetail>/0/VariablematCost}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblValueLoss"
                                             text="Value Loss (INR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
-                                    </HBox>
-                                    <HBox>
-                                        <Label
-                                            id="lblTotalCostOfMaterials"
-                                            text="Total Cost of Materials (INR)"
-                                            design="Bold"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                </VBox>
-                                <VBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtShellFabric"
-                                            text="{SoDetail>/0/ShellFabric}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtTrimFabric"
-                                            text="{SoDetail>/0/TrimFabric}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtTrims"
-                                            text="{SoDetail>/0/Trims}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtPrintingAndOthers"
-                                            text="{SoDetail>/0/Printingandothers}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-
-                                    <HBox>
-                                        <Text
-                                            id="txtTransportation"
-                                            text="{SoDetail>/0/Transportation}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtTestingAndDevelopment"
-                                            text="{SoDetail>/0/TestingaAddDev}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtVariableMaterialsCost"
-                                            text="{SoDetail>/0/VariablematCost}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
+                                          <Text
                                             id="txtValueLoss"
                                             text="{SoDetail>/0/ValueLoss}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+
                                     </HBox>
-                                    <HBox>
-                                        <Text
+                                    <HBox justifyContent="SpaceBetween" width="100%">
+                                        <Label
+                                            id="lblTotalCostOfMaterials"
+                                            text="Total Cost of Materials (INR)"
+                                           design="Bold"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+                                          <Text
                                             id="txtTotalCostOfMaterials"
                                             text="{SoDetail>/0/TotalCostOfMaterials}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
                                 </VBox>
+                                <!-- <VBox height="100%">
+                                    <HBox>
+                                       
+                                    </HBox>
+                                    <HBox>
+                                        
+                                    </HBox>
+                                    <HBox>
+                                        
+                                    </HBox>
+                                    <HBox>
+                                      
+                                    </HBox>
+
+                                    <HBox>
+                                       
+                                    </HBox>
+                                    <HBox>
+                                      
+                                    </HBox>
+                                    <HBox>
+                                      
+                                    </HBox>
+                                    <HBox>
+                                      
+                                    </HBox>
+                                    <HBox>
+                                      
+                                    </HBox>
+                                </VBox> -->
                             </HBox>
                             <HBox />
                             <HBox />
@@ -399,56 +409,88 @@
                             </HBox>
                             <HBox>
                                 <VBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblSmv"
                                             text="SMV (Mints)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                           <Text
+                                            id="txtSmv"
+                                            text="{SoDetail>/0/SMV}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+
                                     </HBox>
-                                    <HBox>
+
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblTargetLineEff"
                                             text="Target Line Eff (%)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                          <Text
+                                            id="txtTargetLineEff"
+                                            text="{SoDetail>/0/TargetLineEff}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
 
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblTargetProdnDayLine"
                                             text="Target Prodn/day/line (Pcs)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                          <Text
+                                            id="txtTargetProdnDayLine"
+                                            text="{SoDetail>/0/TargetProdnDayLine}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblProdnLine"
                                             text="Prodn Line (Nos)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                         <Text
+                                            id="txtProdnLine"
+                                            text="{SoDetail>/0/ProdnLine}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblNoOfDays"
                                             text="No. of Days (Nos)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                          <Text
+                                            id="txtNoOfDays"
+                                            text="{SoDetail>/0/NoOfDays}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblActualLineEff"
                                             text="Actual Line Eff (INR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                          <Text
+                                            id="txtlblActualLineEff"
+                                            text="{SoDetail>/0/ActualLineEff}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             visible="false"
                                             id="lblActualProdn"
@@ -456,62 +498,39 @@
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
-                                    </HBox>
-                                </VBox>
-                                <VBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtSmv"
-                                            text="{SoDetail>/0/SMV}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtTargetLineEff"
-                                            text="{SoDetail>/0/TargetLineEff}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-
-                                    <HBox>
-                                        <Text
-                                            id="txtTargetProdnDayLine"
-                                            text="{SoDetail>/0/TargetProdnDayLine}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtProdnLine"
-                                            text="{SoDetail>/0/ProdnLine}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-
-                                    <HBox>
-                                        <Text
-                                            id="txtNoOfDays"
-                                            text="{SoDetail>/0/NoOfDays}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-
-                                    <HBox>
-                                        <Text
-                                            id="txtlblActualLineEff"
-                                            text="{SoDetail>/0/ActualLineEff}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
+                                         <Text
                                             id="txtActualProdn"
                                             text="{SoDetail>/0/ActualProdn}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
                                 </VBox>
+                                <!-- <VBox>
+                                    <HBox>
+                                     
+                                    </HBox>
+                                    <HBox>
+                                      
+                                    </HBox>
+
+                                    <HBox>
+                                      
+                                    </HBox>
+                                    <HBox>
+                                       
+                                    </HBox>
+
+                                    <HBox>
+                                      
+                                    </HBox>
+
+                                    <HBox>
+                                      
+                                    </HBox>
+                                    <HBox>
+                                       
+                                    </HBox>
+                                </VBox> -->
                             </HBox>
                         </VBox>
                     </HBox>
@@ -528,181 +547,193 @@
                             </HBox>
                             <HBox>
                                 <VBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblGrossContribution"
                                             text="Gross Contribution (INR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                          <Text
+                                            id="txtGrossContribution"
+                                            text="{SoDetail>/0/GrossContribution}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
+
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblGrossContributionLineDay"
                                             text="Gross Contribution/line/Day (INR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                         <Text
+                                            id="txtGrossContributionLineDay"
+                                            text="{SoDetail>/0/GrossContributionLlineDay}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblOperationCostLineDay"
                                             text="Operation Cost/Line/Day (INR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                         <Text
+                                            id="txtOperationCostLineDay"
+                                            text="{SoDetail>/0/OperationCostLineDay}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblEbitdaLineDay"
                                             text="EBITDA/Line/Day (INR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
+                                         <Text
+                                            id="txtEbitdaLineDay"
+                                            text="{SoDetail>/0/EBITDALineDay}"
+                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                        />
                                     </HBox>
-                                    <HBox>
+                                    <HBox justifyContent="SpaceBetween" width="100%">
                                         <Label
                                             id="lblAnnualisedEbitda"
                                             text="Annualised EBITDA (In CR)"
                                             design="Bold"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
-                                    </HBox>
-                                </VBox>
-                                <VBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtGrossContribution"
-                                            text="{SoDetail>/0/GrossContribution}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtGrossContributionLineDay"
-                                            text="{SoDetail>/0/GrossContributionLlineDay}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtOperationCostLineDay"
-                                            text="{SoDetail>/0/OperationCostLineDay}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
-                                            id="txtEbitdaLineDay"
-                                            text="{SoDetail>/0/EBITDALineDay}"
-                                            class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                        />
-                                    </HBox>
-                                    <HBox>
-                                        <Text
+                                           <Text
                                             id="txtAnnualisedEbitda"
                                             text="{SoDetail>/0/AnnualisedEBITDA}"
                                             class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                         />
                                     </HBox>
                                 </VBox>
+                                <!-- <VBox>
+                                    <HBox>
+                                      
+                                    </HBox>
+                                    <HBox>
+                                       
+                                    </HBox>
+                                    <HBox>
+                                       
+                                    </HBox>
+                                    <HBox>
+                                       
+                                    </HBox>
+                                    <HBox>
+                                     
+                                    </HBox>
+                                </VBox> -->
                                 <VBox>
                                     <HBox>
                                         <VBox>
-                                            <HBox>
+                                            <HBox justifyContent="SpaceBetween" width="100%">
                                                 <Label
                                                     id="lblAssetBlockLine"
                                                     text="Asset Block/Line (In CR)"
                                                     design="Bold"
                                                     class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                                 />
+                                                 <Text
+                                                    id="txtAssetBlockLine"
+                                                    text="{SoDetail>/0/AssetBlockLine}"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
                                             </HBox>
 
-                                            <HBox>
+                                            <HBox justifyContent="SpaceBetween" width="100%">
                                                 <Label
                                                     id="lblDepreciationLine"
                                                     text="Depreciation/Line (In CR)"
                                                     design="Bold"
                                                     class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                                 />
+                                                 <Text
+                                                    id="txtDepreciationLine"
+                                                    text="{SoDetail>/0/DepreciationLine}"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
                                             </HBox>
-                                            <HBox>
+                                            <HBox justifyContent="SpaceBetween" width="100%">
                                                 <Label
                                                     id="lblWorkingCapitalLine"
                                                     text="Working Capital/Line (In CR)"
                                                     design="Bold"
                                                     class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                                 />
+                                                 <Text
+                                                    id="txtWorkingCapitalLine"
+                                                    text="{SoDetail>/0/WorkingCapitalLine}"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
                                             </HBox>
-                                            <HBox>
+                                            <HBox justifyContent="SpaceBetween" width="100%">
                                                 <Label
                                                     id="lblTotalCapitalEmployedLine"
                                                     text="Tot. Capital Employed/Line(In CR)"
                                                     design="Bold"
                                                     class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                                 />
+                                                   <Text
+                                                    id="txtTotalCapitalEmployedLine"
+                                                    text="{SoDetail>/0/TotalCapitalEmployedLine}"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
                                             </HBox>
-                                            <HBox>
+                                            <HBox justifyContent="SpaceBetween" width="100%">
                                                 <Label
                                                     id="lblAnnualisedRoceLine"
                                                     text="Annualised ROCE/Line (In CR)"
                                                     design="Bold"
                                                     class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                                 />
+                                                 <Text
+                                                    id="txtAnnualisedRoceLine"
+                                                    text="{SoDetail>/0/AnnualisedROCELine}"
+                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
+                                                />
                                             </HBox>
-                                            <HBox>
+                                            <HBox justifyContent="SpaceBetween" width="100%">
                                                 <Label
                                                     id="lblAnnualisedRoce"
                                                     text="Annualised ROCE (%)"
                                                     design="Bold"
                                                     class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                                 />
-                                            </HBox>
-                                        </VBox>
-                                        <VBox>
-                                            <HBox>
-                                                <Text
-                                                    id="txtAssetBlockLine"
-                                                    text="{SoDetail>/0/AssetBlockLine}"
-                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                                />
-                                            </HBox>
-                                            <HBox>
-                                                <Text
-                                                    id="txtDepreciationLine"
-                                                    text="{SoDetail>/0/DepreciationLine}"
-                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                                />
-                                            </HBox>
-                                            <HBox>
-                                                <Text
-                                                    id="txtWorkingCapitalLine"
-                                                    text="{SoDetail>/0/WorkingCapitalLine}"
-                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                                />
-                                            </HBox>
-                                            <HBox>
-                                                <Text
-                                                    id="txtTotalCapitalEmployedLine"
-                                                    text="{SoDetail>/0/TotalCapitalEmployedLine}"
-                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                                />
-                                            </HBox>
-                                            <HBox>
-                                                <Text
-                                                    id="txtAnnualisedRoceLine"
-                                                    text="{SoDetail>/0/AnnualisedROCELine}"
-                                                    class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
-                                                />
-                                            </HBox>
-                                            <HBox>
-                                                <Text
+                                                 <Text
                                                     id="txtAnnualisedRoce"
                                                     text="{SoDetail>/0/AnnualisedROCE}"
                                                     class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom sapUiTinyMarginEnd"
                                                 />
                                             </HBox>
                                         </VBox>
+                                        <!-- <VBox>
+                                            <HBox>
+                                               
+                                            </HBox>
+                                            <HBox>
+                                               
+                                            </HBox>
+                                            <HBox>
+                                               
+                                            </HBox>
+                                            <HBox>
+                                             
+                                            </HBox>
+                                            <HBox>
+                                               
+                                            </HBox>
+                                            <HBox>
+                                               
+                                            </HBox>
+                                        </VBox> -->
                                     </HBox>
                                 </VBox>
                             </HBox>
